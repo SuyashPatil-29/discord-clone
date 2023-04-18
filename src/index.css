@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer components {
+  .link{
+    @apply cursor-pointer font-semibold text-sm text-white hover:underline;
+  }
+  .server-default{
+    @apply h-12 bg-discord_serverBg rounded-full justify-center items-center cursor-pointer flex hover:rounded-2xl transition-all duration-100 ease-in-out;
+  }
+  .icon{
+    @apply h-6 text-[#b9bbbe] rounded-full cursor-pointer hover:text-[#dcddde] 
+  }
+}
+

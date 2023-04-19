@@ -59,7 +59,14 @@ const Home = () => {
                     </div>
                     <div className='bg-[#292b2f] p-2 flex justify-between items-center space-x-8'>
                         <div className="flex items-center space-x-1">
-                            <img src={user?.photoURL} alt="" className="h-10 rounded-full cursor-pointer" onClick={()=>auth.signOut()}/>
+                        <div className="flex relative group">
+                            <img src={user?.photoURL} alt="" className="h-10 rounded-full cursor-pointer group" onClick={()=>auth.signOut()}/>
+                            <div className='bg-[#202225] w-40 bottom-14 h-10 rounded-2xl hidden group-hover:flex absolute'>
+                                <h3 className="text-gray-300 p-2 pl-5 ">
+                                    Click to Sign Out
+                                </h3>
+                            </div>
+                            </div>
                             <h4 className="text-white text-xs font-medium">
                             {user?.displayName}
                             <span className='text-[#b9bbbe] block'>#{user?.uid.substring(0,4)}</span>
